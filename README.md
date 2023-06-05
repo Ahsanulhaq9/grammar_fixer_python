@@ -1,5 +1,5 @@
 # grammar_fixer_sentence_correction_python
-Basic grammar fixer for Word files in Python
+Basic grammar fixer with sentence correction for Word files in Python
 Explanation of the code:
 1. We import the necessary modules:
    - `docx` module to work with Word documents.
