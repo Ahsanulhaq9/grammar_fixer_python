@@ -25,3 +25,28 @@ Explanation of the code:
    - The `fix_grammar_in_file` function is called with the input and output file paths as arguments to fix the grammar in the input file and save the result to the output file.
 
 The code uses the `language_tool_python` library to fix grammar errors in each paragraph of a Word document and then saves the modified content to a new Word document.
+
+#grammar_fixer_with_sentence_correction
+- The `docx` module is imported to work with Word documents.
+- The `LanguageTool` class is imported from the `language_tool_python` library. It provides access to the LanguageTool library for grammar checking and suggestions.
+- The `fix_paragraph` function takes a paragraph as input and fixes the grammar errors in that paragraph.
+- An instance of the `LanguageTool` class is created with the language code `'en-US'` to initialize the language tool for English.
+- The `check` method is called on the `tool` object to obtain a list of matches representing the grammar errors in the paragraph.
+- The function iterates over the matches in reverse order.
+- If a match has replacements available (i.e., suggestions to fix the error), the function extracts the start and end positions of the error and applies the first replacement suggestion to the paragraph.
+- Finally, the fixed paragraph text is returned.
+- The `fix_grammar_in_file` function takes the input file path and output file path as parameters.
+- A new `Document` object, `doc`, is created by loading the Word document from the input file path.
+- Another new `Document` object, `new_doc`, is created to store the fixed content.
+- The function iterates over each paragraph in the `doc` document.
+- For each paragraph, the `fix_paragraph` function is called to fix grammar errors, and the fixed text is added as a new paragraph in the `new_doc` document.
+- Finally, the `new_doc` document is saved to the output file path.
+- - These lines define the paths for the input file and output file.
+- Replace `'path/to/your/input_file.docx'` with the actual path to your input Word file.
+- Replace `'path/to/your/output_file.docx'` with the desired path for the output Word file.
+- The `fix_grammar_in_file` function is called with the input and output file paths to fix the grammar in the input file and save the result to the output file.
+
+The code uses the `language_tool_python` library to fix grammar errors in each paragraph of a Word document and saves the modified content to a new Word document.
+
+
+
